@@ -20,5 +20,5 @@ async def help_cmd(client, message):
     await message.reply(f"How To Use Me\n\n/id - To Get Your\n\n/info - Get Your Profile Information")
 
 
-
+print("Bot Started")
 dkbotz.run()
