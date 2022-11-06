@@ -1,4 +1,4 @@
-from pyrogram import Client
+from pyrogram import Client, filters
 
 api_id = 7651392
 api_hash = "db62aa57ef8162bb4c95d0cf81e1c09b"
@@ -11,9 +11,13 @@ dkbotz = Client(
 )
 
 
+@dkbotz.on_message(filters.private & filters.command("start"))
+async def start_cmd(client, message):
+    await message.reply("Hi {message.from_user, \n\nI AM ID FINDER BOT\nSend /help For Info")
 
-
-
+@dkbotz.on_message(filters.private & filters.command("help"))
+async def help_cmd(client, message):
+    await message.reply("How To Use Me\n\n/id - To Get Your\n\n/info - Get Your Profile Information")
 
 
 
