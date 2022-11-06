@@ -21,5 +21,4 @@ async def help_cmd(client, message):
 
 
 
-print("Bot Started")
 dkbotz.run()
