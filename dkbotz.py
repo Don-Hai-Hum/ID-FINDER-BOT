@@ -13,11 +13,11 @@ dkbotz = Client(
 
 @dkbotz.on_message(filters.private & filters.command("start"))
 async def start_cmd(client, message):
-    await message.reply("Hi {message.from_user, \n\nI AM ID FINDER BOT\nSend /help For Info")
+    await message.reply(f"Hi {message.from_user.first_name}, \n\nI AM ID FINDER BOT\nSend /help For Info")
 
 @dkbotz.on_message(filters.private & filters.command("help"))
 async def help_cmd(client, message):
-    await message.reply("How To Use Me\n\n/id - To Get Your\n\n/info - Get Your Profile Information")
+    await message.reply(f"How To Use Me\n\n/id - To Get Your\n\n/info - Get Your Profile Information")
 
 
 
