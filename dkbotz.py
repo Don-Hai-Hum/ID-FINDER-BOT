@@ -28,6 +28,12 @@ async def help_cmd(client, message):
        return
     await message.reply(f"How To Use Me\n\n/id - To Get Your\n\n/info - Get Your Profile Information")
 
+@dkbotz.on_message(filters.private & filters.command("id"))
+async def id_cmd(client, message):
+    Fsub = await force_sub(client, message, ft, channel)
+    if Fsub == True:
+       return
+    await message.reply(f"Your ID : {message.from_user.id}")
 
 
 print("Bot Started")
