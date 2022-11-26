@@ -56,6 +56,8 @@ async def info_cmd(client, message):
     id += f"DC ID: {message.from_user.dc_id}\n\n"
     id += f"Fake User: {message.from_user.is_fake}\n\n" if message.from_user.is_fake else "False"
     id += f"Scam User: {message.from_user.is_scam}\n\n" if message.from_user.is_scam else "False"
+    id += f"Verifyed By Telegram: {message.from_user.is_verifyed}\n\n"
+    id += f"Language Code: {message.from_user.language_code}\n\n"
 
 
     await message.reply(id, quote= True)
