@@ -49,9 +49,13 @@ async def info_cmd(client, message):
     if Fsub == True:
        return
     id += "Your Details\n\n"
-    id += "First Name: {message.from_user.first_name}\n\n"
-    id += "Last Name: {message.from_user.last_name}\n\n" if message.from_user.last_name else ""
-    id += "UserName: {message.from_user.username}\n\n" if message.from_user.username else "False"
+    id += f"First Name: {message.from_user.first_name}\n\n"
+    id += f"Last Name: {message.from_user.last_name}\n\n" if message.from_user.last_name else ""
+    id += f"UserName: {message.from_user.username}\n\n" if message.from_user.username else "False"
+    id += f"User ID: {message.from_user.id}\n\n"
+    id += f"DC ID: {message.from_user.dc_id}\n\n"
+    id += f"Fake User: {message.from_user.is_fake}\n\n" if message.from_user.is_fake else "False"
+    id += f"Scam User: {message.from_user.is_scam}\n\n" if message.from_user.is_scam else "False"
 
 
     await message.reply(id, quote= True)
